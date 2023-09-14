@@ -1,0 +1,27 @@
+type Query {
+    welcome : String
+}
+
+input DescriptionInput {
+    des : String
+}
+input IdInput {
+    id : String
+    des : String
+}
+
+
+
+type Description{
+    id : String,
+    des : String
+}
+
+
+type Mutation {
+    addTodo(description : DescriptionInput) : Description
+    deleteTodo(TodoID : String) : String
+    getTodo(TodoID : String) : String
+
+    updateTodo(description : IdInput) : Description
+}

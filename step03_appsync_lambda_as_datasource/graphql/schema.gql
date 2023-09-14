@@ -1,0 +1,17 @@
+type Todo {
+  id: ID!
+  title: String!
+  done: Boolean!
+}
+
+
+type Query {
+    hello : String ,
+    mycustommessage(msg: String) : String ,
+    getTodo(id : String ) : Todo
+}
+
+
+type Mutation {
+    addTodo(description : String) : String
+}

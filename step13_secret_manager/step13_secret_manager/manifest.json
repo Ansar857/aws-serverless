@@ -1,0 +1,88 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "Step13SecretManagerStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Step13SecretManagerStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Step13SecretManagerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Step13SecretManagerStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fd8161490178c4da9eb9609abb298c46a2d51b93761173576a01aec9ed27e646.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Step13SecretManagerStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Step13SecretManagerStack.assets"
+      ],
+      "metadata": {
+        "/Step13SecretManagerStack/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecretA720EF05"
+          }
+        ],
+        "/Step13SecretManagerStack/ExampleLambdaAssetFn/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleLambdaAssetFnServiceRoleD5D4000C"
+          }
+        ],
+        "/Step13SecretManagerStack/ExampleLambdaAssetFn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleLambdaAssetFnF498C67E"
+          }
+        ],
+        "/Step13SecretManagerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Step13SecretManagerStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Step13SecretManagerStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Step13SecretManagerStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Step13SecretManagerStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
