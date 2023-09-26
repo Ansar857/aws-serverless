@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.amplify-button[data-variation='primary'] {
+    background: linear-gradient(
+      to right,
+      var(--amplify-colors-green-80),
+      var(--amplify-colors-orange-40)
+    );
+  }
