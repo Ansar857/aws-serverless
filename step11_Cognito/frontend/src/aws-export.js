@@ -4,9 +4,9 @@
 const awsExports = {
    
     "Auth": {
-        "region": "us-east-1",
-        "userPoolId": "us-east-1_njPu5jv1W",
-        "userPoolWebClientId": "39ia7fnhc65r4goe12cg27lvsg"
+        "region": "Enter your region",
+        "userPoolId": "Enter your pool id",
+        "userPoolWebClientId": "Enter your client id"
     }
 };
 
